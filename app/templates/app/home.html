@@ -1,0 +1,11 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+
+{% for book in books %}
+<h1>{{ book.title }}</h1>
+<p>By {{ book.author }} on {{ book.date_posted }}</p>
+<p>{{ book.content }}</p>
+{% endfor %}
+
+{% endblock content %}
