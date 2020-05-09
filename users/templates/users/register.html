@@ -1,5 +1,7 @@
+<!-- add a sidebar to this page so it looks better-->
 
 {% extends "app/base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
     <div class="content-section">
@@ -7,7 +9,7 @@
             {% csrf_token %}
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Join Now</legend>
-                {{ form.as_p }}
+                {{ form|crispy }}           <!-- this is the entire form-->
             </fieldset>
             <div class="form-group">
                 <button class="btn btn-outline-info" type="submit">Sign Up</button>
