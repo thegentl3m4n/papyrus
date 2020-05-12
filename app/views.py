@@ -22,7 +22,7 @@ books = [
 
 def home(request):
     context = {
-        'books': books
+        'books': post.object.all()
     }
     return render(request, 'app/home.html', context)
 
