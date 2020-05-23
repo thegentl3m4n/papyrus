@@ -117,3 +117,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
+
+ALLOWED_HOSTS = ['08d33d39.ngrok.io', 'localhost', '127.0.0.1']
