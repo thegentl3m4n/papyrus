@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Book
+from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
     ListView,
@@ -22,6 +23,20 @@ class BookListView(ListView):
     template_name = 'app/home.html'
     context_object_name = 'books'
     ordering = ['-date_added']
+    paginate_by = 4
+
+
+class UserBookListView(ListView):
+    model = Book
+    template_name = 'app/user_books.html'
+    context_object_name = 'books'
+    ordering = ['-date_added']
+    paginate_by = 4
+
+    def get_queryset(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        return Book.objects.filter(owner=user).order_by('-date_added')
+
 
 
 class BookDetailView(DetailView):

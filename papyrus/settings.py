@@ -16,6 +16,16 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# email host
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.zoho.in'
+EMAIL_HOST_USER = 'feedb4ck@zohomail.in'
+EMAIL_HOST_PASSWORD = 'averylongandterriblepassword'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'feedb4ck@zohomail.in'
+# for extra security use: https://www.youtube.com/watch?v=5iWhQWVXosU
+
 # Application definition
 
 INSTALLED_APPS = [
