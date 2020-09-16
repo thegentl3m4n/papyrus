@@ -1,12 +1,6 @@
 # papyrus
 its a website that allows their users to exchange resources like books and pdfs.
 
-# requirements
-python3.8 or above
-django 3.0.6
-crispy (pip module)
-pillow
-
 # how to use
 you can simply run its light weight server (manage.py) if you have a system full filling application requirements.
 command: "python3 manage.py runserver"
