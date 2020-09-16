@@ -120,6 +120,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -128,4 +132,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
 
-ALLOWED_HOSTS = ['08d33d39.ngrok.io', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['ba147cfc03cc.ngrok.io', 'localhost', '127.0.0.1']
